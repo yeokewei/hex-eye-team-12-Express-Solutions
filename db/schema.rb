@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_08_02_130805) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "all_services", force: :cascade do |t|
     t.text "category"
     t.integer "category_id"
@@ -27,8 +30,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_02_130805) do
     t.text "cat_alt_text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "description"
-    t.text "deep_link"
+    t.string "description"
+    t.string "deep_link"
   end
 
   create_table "branches", force: :cascade do |t|
