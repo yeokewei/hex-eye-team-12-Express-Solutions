@@ -12,36 +12,36 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_08_02_130805) do
   create_table "all_services", force: :cascade do |t|
-    t.string "category"
+    t.text "category"
     t.integer "category_id"
-    t.string "service_id"
-    t.string "service"
-    t.string "migratable"
+    t.text "service_id"
+    t.text "service"
+    t.text "migratable"
     t.integer "count"
-    t.string "details"
+    t.text "details"
     t.integer "digital_time"
     t.integer "branch_time"
-    t.string "service_image_link"
-    t.string "service_alt_text"
-    t.string "cat_image_link"
-    t.string "cat_alt_text"
+    t.text "service_image_link"
+    t.text "service_alt_text"
+    t.text "cat_image_link"
+    t.text "cat_alt_text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "description"
-    t.string "deep_link"
+    t.text "description"
+    t.text "deep_link"
   end
 
   create_table "branches", force: :cascade do |t|
-    t.string "bank"
-    t.string "branch_name"
-    t.string "branch"
-    t.string "sms_number"
+    t.text "bank"
+    t.text "branch_name"
+    t.text "branch"
+    t.text "sms_number"
     t.integer "wait_time"
   end
 
   create_table "predictions", force: :cascade do |t|
-    t.string "branch_name"
-    t.string "service"
+    t.text "branch_name"
+    t.text "service"
     t.bigint "unixdate"
     t.datetime "date"
     t.float "prediction"
@@ -50,7 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_02_130805) do
   end
 
   create_table "topics", force: :cascade do |t|
-    t.string "topic"
+    t.text "topic"
   end
 
 end
